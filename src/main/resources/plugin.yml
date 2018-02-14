@@ -4,3 +4,8 @@ version: "1.0.0"
 author: Magikcraft
 api: ["1.0.0"]
 description: BossBarAPI
+
+
+commands:
+  bossbar:
+    description: "main BossBarAPI command"
