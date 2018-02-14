@@ -1,5 +1,6 @@
 /*
  * BossBarAPI
+ * Conversion to maven project by Josh Wulf
  * A plugin by XenialDan aka thebigsmileXD
  * http://github.com/thebigsmileXD/BossBarAPI
  * Sending the Bossbar independ from the Server software
@@ -39,7 +40,6 @@ public class BossBarPlugin extends PluginBase implements Listener{
 
     @Override
     public void onEnable(){
-        System.out.println("Enabling BossBar...");
         this.getDataFolder().mkdirs();
         Config config = new Config(new File(this.getDataFolder(), "hide.yml"), Config.YAML);
         this.hide = (LinkedHashMap<String, Object>) config.getAll();

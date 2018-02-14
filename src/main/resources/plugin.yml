@@ -1,0 +1,6 @@
+name: BossBarAPI
+main: io.magikcraft.BossBarAPI.BossBarPlugin
+version: "1.0.0"
+author: Magikcraft
+api: ["1.0.0"]
+description: BossBarAPI
