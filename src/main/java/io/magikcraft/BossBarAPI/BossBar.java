@@ -155,6 +155,10 @@ public class BossBar{
         return;
     }
 
+    public void removeFrom(Player player) {
+        PacketAPI.removeBossBar(player, this.eid);
+    }
+
     protected boolean sendTimerDataToAll(){
         HashSet<Player> players = new HashSet<Player>();
         for(Player o : Server.getInstance().getOnlinePlayers().values()){
