@@ -111,6 +111,29 @@ public abstract class PacketAPI {
         player.dataPacket(bpk);
     }
 
+    public static void sendColor(Player player, int eid, int color) {
+        BossEventPacket bpk = new BossEventPacket(); // This updates the bar
+        /*
+            0	Pink
+            1	Blue
+            2	Red
+            3	Green
+            4	Yellow
+            5	Purple
+            6	White
+        */
+        bpk.bossEid = eid;
+        bpk.type = 7; // COLOR
+        bpk.color = color; // yellow
+        bpk.overlay = 0; // No division / notches - a continuous bar
+        player.dataPacket(bpk);
+
+        bpk = new BossEventPacket(); // This updates the bar
+        bpk.bossEid = eid;
+        bpk.type = 1; // UPDATE
+        player.dataPacket(bpk);
+    }
+
     /**
      * Sets the BossBar title by EID
      *

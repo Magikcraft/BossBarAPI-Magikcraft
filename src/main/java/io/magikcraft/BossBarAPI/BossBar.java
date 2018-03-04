@@ -16,6 +16,7 @@ public class BossBar{
     public int maxHealth;
     public int currentHealth;
     public boolean visible = true;
+    public int color = 5;
 
     public Long lastUpdated = System.currentTimeMillis();
     public int totalUpdate = 0;
@@ -95,6 +96,11 @@ public class BossBar{
         PacketAPI.broadcastTitle(this.eid, this.title);
     }
 
+    public void setColor(Player player, int eid, int color) {
+        this.color = color;
+        PacketAPI.sendColor(player, eid, color);
+    }
+
     public String getTitle(){
         return this.title;
     }
@@ -152,6 +158,7 @@ public class BossBar{
         }
         PacketAPI.sendBossBar(player, this.eid, this.title);
         PacketAPI.sendPercentage(player, this.eid, this.currentHealth / (double) this.maxHealth * 100);
+        PacketAPI.sendColor(player, this.eid, 4);
         return;
     }
 
