@@ -6,4 +6,4 @@ It's based on a plugin originally written by by XenialDan aka thebigsmileXD for 
 
 http://github.com/thebigsmileXD/BossBarAPI
 
-The original Nukkit port was done by solo5star, I've mavenised it.
+The original Nukkit port was done by solo5star [here](https://github.com/solo5star/BossBarAPI_Nukkit), I've mavenised it.
